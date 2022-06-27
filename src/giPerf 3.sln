@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "giPerf 3", "giPerf 3.csproj", "{F48DB762-0A6A-472C-B9CE-14E963B67E57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F48DB762-0A6A-472C-B9CE-14E963B67E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48DB762-0A6A-472C-B9CE-14E963B67E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48DB762-0A6A-472C-B9CE-14E963B67E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48DB762-0A6A-472C-B9CE-14E963B67E57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19FF4198-AAF5-4A26-9C65-502CEF9510B5}
+	EndGlobalSection
+EndGlobal
