@@ -35,16 +35,31 @@ namespace giPerf_3
         {
             if (radBtnServer.Checked)
             {
-                executeCommand(@".\Resources\iperf3.exe -s");
+                if (txbPort.Text == "")
+                {
+                    executeCommand(@".\Resources\iperf3.exe -s");
+                }
+                else
+                {
+                    executeCommand(@".\Resources\iperf3.exe -s -p " + txbPort.Text);
+                }
+
             }
-            else if (txbIP.Text != "" & txbTime.Text != "" & txbPort.Text != "")
+            else if (txbIP.Text != "" & txbTime.Text != "")
             {
                 // Start Countdown
                 Thread bgThread = new Thread(() => threadCountdown(Convert.ToInt32(txbTime.Text)));
                 bgThread.Start();
 
                 // Execute Command
-                executeCommand(@".\Resources\iperf3.exe -c " + txbIP.Text + "-p " + txbPort.Text + " -t " + txbTime.Text);
+                if (txbPort.Text == "")
+                {
+                    executeCommand(@".\Resources\iperf3.exe -c " + txbIP.Text + " -t " + txbTime.Text);
+                }
+                else
+                {
+                    executeCommand(@".\Resources\iperf3.exe -c " + txbIP.Text + " -p " + txbPort.Text + " -t " + txbTime.Text);
+                }
             }
             else
             {
@@ -56,6 +71,12 @@ namespace giPerf_3
         {
             try
             {
+                Process[] procArr = Process.GetProcessesByName("ipferf3");
+                foreach (Process p in procArr)
+                {
+                    p.Kill();
+                }
+
                 cmd.Close();
                 Environment.Exit(0);
             }
@@ -70,13 +91,11 @@ namespace giPerf_3
             if (radBtnServer.Checked)
             {
                 txbIP.Enabled = false;
-                txbPort.Enabled = false;
                 txbTime.Enabled = false;
             }
             else
             {
                 txbIP.Enabled = true;
-                txbPort.Enabled = true;
                 txbTime.Enabled = true;
             }
         }
@@ -146,7 +165,7 @@ namespace giPerf_3
         {
             try
             {
-                Convert.ToInt32(txbTime.Text);
+                Convert.ToInt32(txbPort.Text);
                 txbPort.BackColor = DefaultBackColor;
             }
             catch (Exception)

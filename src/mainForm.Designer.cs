@@ -65,7 +65,7 @@
             this.btnStartTest.Location = new System.Drawing.Point(5, 387);
             this.btnStartTest.Name = "btnStartTest";
             this.btnStartTest.Size = new System.Drawing.Size(85, 23);
-            this.btnStartTest.TabIndex = 3;
+            this.btnStartTest.TabIndex = 5;
             this.btnStartTest.Text = "Start Test";
             this.btnStartTest.UseVisualStyleBackColor = false;
             this.btnStartTest.Click += new System.EventHandler(this.btnStartTest_Click);
@@ -175,7 +175,7 @@
             this.txbTime.Location = new System.Drawing.Point(520, 20);
             this.txbTime.Name = "txbTime";
             this.txbTime.Size = new System.Drawing.Size(50, 20);
-            this.txbTime.TabIndex = 3;
+            this.txbTime.TabIndex = 4;
             this.txbTime.TextChanged += new System.EventHandler(this.txbTime_TextChanged);
             // 
             // lblIP
@@ -278,7 +278,7 @@
             this.txbPort.Location = new System.Drawing.Point(375, 20);
             this.txbPort.Name = "txbPort";
             this.txbPort.Size = new System.Drawing.Size(50, 20);
-            this.txbPort.TabIndex = 6;
+            this.txbPort.TabIndex = 3;
             this.txbPort.TextChanged += new System.EventHandler(this.txbPort_TextChanged);
             // 
             // mainForm
